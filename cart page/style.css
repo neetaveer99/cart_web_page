@@ -1,0 +1,331 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+.main {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bundle-save {
+    background-color: #ffffff;
+    color: #007F61;
+    padding: 0 20px;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    background-color: #C8C8C8;
+    z-index: 0;
+}
+
+.line.left {
+    left: 395px;
+    width: calc(50% - 28px);
+}
+
+.line.right {
+    right: 395px;
+    width: calc(50% - 28px);
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 30px;
+    border: 2px solid #C8C8C8;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 8% 42% 20% 30%;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+}
+
+.box1.active {
+    background-color: #F4FBF9;
+    border: 2px solid #007F61;
+}
+
+
+.min-value {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    text-decoration: line-through;
+    padding-bottom: 10px;
+    color: #9F9F9F;
+}
+
+
+.radio-label1 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    size: 50px;
+
+}
+
+
+.price1 {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.discount1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.size {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.pair-font {
+    font-weight: 400;
+}
+
+.box2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.textbottom {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.righttext {
+    display: flex;
+    justify-content: right;
+    font-size: 20px;
+}
+
+.left-text {
+    color: #007F61;
+}
+
+.btn {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    background-color: #007F61;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bottom-text {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    font-size: 20px;
+    color: #575252;
+    font-style: italic;
+}
+
+
+.options label,
+.options select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.popular {
+    color: #007F61;
+    text-align-last: end;
+    padding-top: 8px;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    padding-left: 4px;
+
+}
+
+.number {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 4px;
+}
+
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+
+select:focus+.focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid var(--select-focus);
+    border-radius: inherit;
+}
+
+.select {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+    min-width: 9ch;
+    max-width: 30ch;
+    border: 1px solid #D9D9D9;
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    z-index: 1;
+    outline: none;
+}
+
+select,
+&::after {
+    grid-area: select;
+}
+
+
+/* Hide the default radio button */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #DADADA;
+    /* Set the overall border color */
+    border-radius: 50%;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Style the custom radio button when checked */
+input[type="radio"]:checked {
+    background-color: #F4FBF9;
+    /* Set the background color to white */
+    /* border-color: white green green white;  */
+    border-color: #007F61;
+}
+
+
+/* Create a pseudo-element for the inner circle */
+input[type="radio"]:checked::before {
+    content: "";
+    width: 10px;
+    /* Set the size of the inner circle */
+    height: 10px;
+    background-color: #007F61;
+    /* Set the color of the inner circle */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    /* Ensure the inner circle is on top */
+}
+
+
+
+@media (max-width : 945px) {
+
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .box1,
+    .box2,
+    .btn {
+        width: 100%;
+    }
+
+    .line.left {
+        left: 292px;
+
+    }
+
+    .line.right {
+        right: 286px;
+    }
+}
